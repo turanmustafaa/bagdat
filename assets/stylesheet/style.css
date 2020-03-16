@@ -1,0 +1,107 @@
+@font-face{
+  font-family: AceSans;
+  src: url(../fonts/AceSans-Light.otf);
+}
+@font-face{
+  font-family: GothamLight;
+  src: url(../fonts/Gotham-Light.otf);
+}
+html{
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#website{
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#sec1{
+  background: url(../images/bg1.png);
+  background-size: cover;
+  height: 100vh;
+}
+.navigation{
+  width: 60%;
+  margin-left:auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-top: none;
+}
+.navigation a{
+  text-decoration: none;
+}
+
+.navigation a li{
+  list-style-type: none;
+  font-family: AceSans;
+  color: #ffffff;
+}
+#sec1 .mean-items1{
+  text-align: center;
+  margin-top: 30px;
+}
+#sec1 .mean-items1 > div:nth-child(1){
+  margin-bottom: 10px;
+}
+#sec1 .mean-items1 > div:nth-child(1) img{
+  width: 350px;
+}
+#sec1 .mean-items1 > p:nth-child(2){
+  color: #ffffff;
+  font-family: GothamLight;
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+#sec1 .mean-items1 > a{
+  display: inline-flex;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: GothamLight;
+  vertical-align: auto;
+}
+#sec1 .mean-items1 > a i{
+  padding-right: 10px;
+  border-right: 1px solid #ffffff;
+}
+#sec1 .mean-items1 > a p{
+  padding-left: 10px;
+}
+#sec1 .animation-pieces a{
+  vertical-align: middle;
+}
+#sec1 .animation-pieces a img{
+  opacity: 0;
+}
+#sec1 .animation-pieces > a:nth-child(even) img{
+  width: 140px;
+}
+#sec1 .animation-pieces > a:nth-child(odd) img{
+  width: 160px;
+}
+#sec2{
+  background: url(../images/bg2.png);
+  background-size: cover;
+  height: 100vh;
+}
+#sec3{
+  background: url(../images/bg3.png);
+  background-size: cover;
+  height: 100vh;
+}
+#sec4{
+  background: url(../images/bg4.png);
+  background-size: cover;
+  height: 100vh;
+}
+#sec5{
+  background: url(../images/bg5.png);
+  background-size: cover;
+  height: 100vh;
+}
