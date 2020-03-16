@@ -1,32 +1,39 @@
-@font-face{
+@font-face {
   font-family: AceSans;
   src: url(../fonts/AceSans-Light.otf);
 }
-@font-face{
+
+@font-face {
   font-family: GothamLight;
   src: url(../fonts/Gotham-Light.otf);
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-#website{
+
+#website {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-#sec1{
+
+#sec1 {
   background: url(../images/bg1.png);
   background-size: cover;
   height: 100vh;
+  position: relative;
 }
-.navigation{
+
+.navigation {
   width: 60%;
-  margin-left:auto;
+  margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
@@ -34,74 +41,203 @@ html{
   border: 1px solid #ffffff;
   border-top: none;
 }
-.navigation a{
+
+.navigation a {
   text-decoration: none;
 }
 
-.navigation a li{
+.navigation a li {
   list-style-type: none;
   font-family: AceSans;
   color: #ffffff;
 }
-#sec1 .mean-items1{
+
+#sec1 .mean-items1 {
   text-align: center;
   margin-top: 30px;
 }
-#sec1 .mean-items1 > div:nth-child(1){
+
+#sec1 .mean-items1>div:nth-child(1) {
   margin-bottom: 10px;
 }
-#sec1 .mean-items1 > div:nth-child(1) img{
+
+#fade-word {
+  opacity: 0;
+  transition: 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+#sec1 .mean-items1>div:nth-child(1) img {
   width: 350px;
 }
-#sec1 .mean-items1 > p:nth-child(2){
+
+#sec1 .mean-items1>p:nth-child(2) {
   color: #ffffff;
   font-family: GothamLight;
   font-size: 42px;
   letter-spacing: 2px;
 }
-#sec1 .mean-items1 > a{
+
+#sec1 .mean-items1>a {
   display: inline-flex;
   text-decoration: none;
   color: #ffffff;
   font-family: GothamLight;
   vertical-align: auto;
 }
-#sec1 .mean-items1 > a i{
+
+#sec1 .mean-items1>a i {
   padding-right: 10px;
   border-right: 1px solid #ffffff;
 }
-#sec1 .mean-items1 > a p{
+
+#sec1 .mean-items1>p:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+#sec1 .mean-items1>a p {
   padding-left: 10px;
 }
-#sec1 .animation-pieces a{
+
+#sec1 .animation-pieces a {
   vertical-align: middle;
 }
-#sec1 .animation-pieces a img{
+
+#sec1 .animation-pieces a img {
   opacity: 0;
 }
-#sec1 .animation-pieces > a:nth-child(even) img{
+#sec1 .animation-pieces a img:hover{
+  /* transform: scale(1.2); */
+}
+
+#sec1 .animation-pieces>a:nth-child(even) img {
   width: 140px;
 }
-#sec1 .animation-pieces > a:nth-child(odd) img{
+
+#sec1 .animation-pieces>a:nth-child(odd) img {
   width: 160px;
+  /* z-index: -10; */
 }
-#sec2{
-  background: url(../images/bg2.png);
+
+#fade-word2 {
+  position: relative;
+}
+
+.addTextDecoration {
+  padding-bottom: 5px;
+  position: relative;
+  transition: 1s ease-in-out;
+
+}
+
+@keyframes myanime {
+  0% {
+    width: 100%;
+    /* transform: scale(0); */
+  }
+
+  50% {
+    width: 0%;
+    /* transform: scale(0.5); */
+  }
+
+  100% {
+    width: 100%;
+    /* transform: scale(1); */
+  }
+}
+
+.addTextDecoration::after {
+  animation: myanime 2s ease-in-out;
+  /* animation-delay: 2s; */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, orangered, green);
+  height: 3px;
+  width: 100%;
+  z-index: 10;
+
+}
+.scaleanimation {
+  animation: scaleanime;
+  animation-duration: 3s;
+}
+
+@keyframes scaleanime {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.push-bottom {
+  margin: 20px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  transition: .3s ease-in-out;
+}
+.push-bottom:hover i{
+  animation: pushbot 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  transition: .3s ease-in-out;
+
+}
+@keyframes pushbot{
+  0%{
+    transform: scale(1);
+    
+  }
+  50%{
+    transform: scale(1.3);
+    padding-bottom: 5px;
+  }
+  100%{
+    transform: scale(1);
+    padding-bottom: 0px;
+  }
+}
+
+.push-bottom i:not(:last-child) {
+  font-size: 5px;
+  padding-bottom: 5px;
+}
+
+#sec2 {
+  background: url(../images/bg5.png);
   background-size: cover;
   height: 100vh;
 }
-#sec3{
+
+#sec3 {
   background: url(../images/bg3.png);
   background-size: cover;
   height: 100vh;
 }
-#sec4{
+
+#sec4 {
   background: url(../images/bg4.png);
   background-size: cover;
   height: 100vh;
 }
-#sec5{
-  background: url(../images/bg5.png);
+
+#sec5 {
+  background: url(../images/bg2.png);
   background-size: cover;
   height: 100vh;
 }
